@@ -3,36 +3,57 @@
 ## Core Message
 **The "App Store" Moment for Agents**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To explain the "Go-to-Market" (GTM) strategy for 2026. How do you get discovered?
 
-#### 1. The Channel
-*   **Marketplace:** Instant visibility to 800M+ users.
-*   **Significance:** This is the distribution shortcut. You don't need a sales team; you need a high-ranking "OpenAI App."
+### 2. Critical Analysis & Rationale
+*   **Aggregator Theory:** Platforms like OpenAI and Microsoft aggregated the users. To win, you must build on top of their aggregators.
+*   **The Discovery Problem:** Building an agent is easy; finding users is hard. The "GPT Store" is the search engine for agents.
 
----
+### 3. Step-by-Step Explanation
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+#### a. Basic Insights
+*   **The Channel:** Marketplace. Instant visibility to 800M+ users.
+*   **The Significance:** This is the distribution shortcut. You don't need a sales team; you need a high-ranking "OpenAI App."
 
-#### 1. Objective
-To explain the "Go-to-Market" (GTM) strategy for 2026.
+#### b. Advanced Insights (Deeper Look)
+*   **The "Trojan Horse" Marketing:** You launch a free "Light" version of your agent on the GPT Store. It solves a simple problem. At the end of the interaction, it says: "For enterprise features (SSO, Reporting), click here to upgrade." This funnels users from the Aggregator to your **Owned Platform**.
+*   **Platform Dependency Risk:** While OpenAI is great for distribution, it is risky to rely on them for logic. Strategy: Use OpenAI for **Interface** but keep your **Skills** and **MCPs** on your own server.
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Sell where the people already are (ChatGPT).
-*   **Advanced Insights:** **The Aggregator Advantage.** OpenAI is the "Aggregator" of demand. By building an "OpenAI App" (formerly GPTs/Actions), you bypass the "Customer Acquisition Cost" (CAC) of the open web. However, the risk is **Platform Dependency.** Strategy: Use OpenAI for distribution, but own your **Skills** and **MCPs** so you can port them if OpenAI changes the rules.
+### 4. When to Use?
+*   **Launch Strategy:** Day 1 distribution.
+*   **Lead Gen:** Using the GPT Store as a top-of-funnel lead magnet.
 
-#### 3. Examples
-*   **Basic:** Building a GPT.
-*   **Intermediate:** Building a "GPT Action" that connects to your custom API.
-*   **PhD / Advanced:** **App Ecosystem Interoperability.** Building an agent that is available on OpenAI, Microsoft Copilot, and Apple Intelligence simultaneously, using a single **Skill-Backend** to manage the logic.
+### 5. Examples
 
-#### 4. Implementation in Agentic AI
-*   **Spec:** OpenAPI (Swagger) spec for your Agent Tools.
+#### a. Basic (The GPT)
+*   *Action:* Building a "Logo Maker GPT."
 
-#### 5. Why This Matters?
+#### b. Intermediate (The Action)
+*   *Action:* Building a "GPT Action" that connects ChatGPT to your custom API.
+
+#### c. PhD / Advanced (App Ecosystem Interoperability)
+*   *Concept:* **Cross-Platform Presence.**
+*   *Scenario:* You build a single "Agent Brain" hosted on your cloud. You then publish "Skins" (Interfaces) for OpenAI, Microsoft Copilot, Slack, and Discord. All these "Apps" point back to your single API. You are ubiquitous.
+
+### 6. Implementation in Agentic AI
+*   **Spec:** `openapi.json` (Swagger) spec for your Agent Tools. This is how you tell ChatGPT what your agent can do.
+
+### 7. Why This Matters?
 *   **Distribution:** It is the fastest path to 1 million users.
+*   **CAC:** Customer Acquisition Cost is near zero if you rank well.
 
-#### 6. Architecture Deep Dive
-*   **The Bridge:** OpenAI Interface -> Your API -> Your Agent Factory.
+### 8. What Problem Does It Solve?
+*   **The "Cold Start" Problem:** Nobody knows your startup exists.
 
-#### 7. Reflection Questions
-*   *Are you fighting for traffic or fishing where the fish are?*
+### 9. Architecture Deep Dive
+*   **The Bridge:** OpenAI Interface -> Your API Gateway -> Your Agent Factory.
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Giving away all value in the free GPT.
+    *   *Correction:* Gate the high-value "Actions" behind an Auth token.
+*   **Practice:** "Review Optimization." Optimize your GPT's name, description, and starter questions for search.
+
+### 11. Reflection Questions
+1.  *Are you fighting for traffic or fishing where the fish are?*
+2.  *Do you own the customer relationship, or does OpenAI?*

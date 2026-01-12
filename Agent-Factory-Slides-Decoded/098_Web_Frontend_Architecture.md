@@ -3,41 +3,60 @@
 ## Core Message
 **Technical Stack for the Dedicated App**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To provide a concrete "Starter Kit" for the web channel. This slide bridges the gap between the "Agent Backend" and the "Human User."
 
-#### 1. The Tech Stack
-*   **Frontend:** Next.js (React).
-*   **Interaction:** OpenAI ChatKit / Vercel AI SDK.
-*   **Backend:** FastAPI (Python).
+### 2. Critical Analysis & Rationale
+*   **Streaming is Mandatory:** Agents are slow (thinking time). You must use "Streaming" (sending text as it generates) to keep the user engaged. A static loader feels broken.
+*   **Generative UI:** The future of UI is not static buttons; it's UI generated on the fly by the agent to suit the context.
+
+### 3. Step-by-Step Explanation
+
+#### a. Basic Insights
+*   **Frontend:** Next.js (React). The industry standard.
+*   **Interaction:** OpenAI ChatKit / Vercel AI SDK. Handles the streaming plumbing.
+*   **Backend:** FastAPI (Python). The agent runtime.
 *   **Logic:** Agent Skills & MCP.
 
-#### 2. The Flow
-`User Interface -> ChatKit -> FastAPI -> Agent Engine -> Tools`.
+#### b. Advanced Insights (Deeper Look)
+*   **Generative UI:** Don't just show a chat bubble. Use Next.js to render "Components" based on the agent's output. (e.g., If the agent says "Here is the sales chart," the frontend renders a real `Recharts` component, not an image). This is **Real-Time Interface Generation**.
+*   **Tool Call Visualization:** Show the user *what* the agent is doing ("Searching LinkedIn...", "Reading PDF..."). This builds trust and reduces perceived latency.
 
----
+### 4. When to Use?
+*   **Building the Web App:** This is your architecture diagram.
+*   **UX Design:** Deciding how to display agent actions.
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+### 5. Examples
 
-#### 1. Objective
-To provide a concrete "Starter Kit" for the web channel.
+#### a. Basic (Text Chat)
+*   *Action:* Simple ChatGPT clone.
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Use modern, fast tools.
-*   **Advanced Insights:** **Generative UI.** Don't just show a chat bubble. Use Next.js to render "Components" based on the agent's output. (e.g., If the agent says "Here is the sales chart," the frontend renders a real `Recharts` component, not an image). This is **Real-Time Interface Generation**.
+#### b. Intermediate (Card UI)
+*   *Action:* A chat that creates "Cards" for approvals (e.g., "Approve Refund"). The user clicks "Yes/No" on the card, which sends a payload back to the agent.
 
-#### 3. Examples
-*   **Basic:** A text chat.
-*   **Intermediate:** A chat with "Cards" for approvals.
-*   **PhD / Advanced:** **Canvas-Based Autonomy.** An interface like "v0.dev" where the agent and user co-edit a shared workspace. The Frontend isn't a "Chat," it's a "Shared State Editor."
+#### c. PhD / Advanced (Canvas-Based Autonomy)
+*   *Concept:* **Shared Workspace (Co-Pilot Mode).**
+*   *Scenario:* An interface like "v0.dev" or "Cursor" where the agent and user co-edit a shared workspace (Canvas). The Agent writes code on the right; the User previews it on the left. The Frontend isn't a "Chat," it's a **Shared State Editor**.
 
-#### 4. Implementation in Agentic AI
-*   **Library:** `Vercel AI SDK` for streaming and tool calls.
+### 6. Implementation in Agentic AI
+*   **Library:** `Vercel AI SDK` (`useChat`, `useCompletion`).
+*   **Protocol:** Server-Sent Events (SSE).
 
-#### 5. Why This Matters?
-*   **UX:** A custom frontend allows for a much better user experience than a raw chatbot.
+### 7. Why This Matters?
+*   **UX:** A custom frontend allows for a much better, richer user experience than a raw chatbot.
+*   **Control:** You can inject your own branding and navigation.
 
-#### 6. Architecture Deep Dive
-*   **Streaming:** Using Server-Sent Events (SSE) to show the agent's "Reasoning" in real-time.
+### 8. What Problem Does It Solve?
+*   **The "Wall of Text":** Breaks up text with interactive elements.
 
-#### 7. Reflection Questions
-*   *Is your UI helping the user, or just getting in the way?*
+### 9. Architecture Deep Dive
+*   **Streaming:** The backend yields chunks of data. The frontend hydrates the UI incrementally.
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Blocking the UI while the agent thinks.
+    *   *Correction:* Always use async/non-blocking calls.
+*   **Practice:** "Optimistic Updates." Show the user that the request was received immediately.
+
+### 11. Reflection Questions
+1.  *Is your UI helping the user, or just getting in the way?*
+2.  *Can your agent render a button or a chart?*

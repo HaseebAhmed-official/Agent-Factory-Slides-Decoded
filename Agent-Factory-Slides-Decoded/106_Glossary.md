@@ -1,43 +1,63 @@
 # Slide 106: Glossary of Key Terms
 
 ## Core Message
-**The Vocabulary of the Agent Factory**
+**The Vocabulary of the Agent Factory: Speaking the Language**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To ensure everyone is speaking the same language. Precision in language leads to precision in code.
 
-#### 1. Definitions
-*   **MCP:** Model Context Protocol.
-*   **Agent Skill:** Modular folder with `SKILL.md`.
-*   **Digital FTE:** Autonomous AI worker.
-*   **SDD:** Spec-Driven Development.
-*   **General Agent:** Flexible builder (Claude Code).
-*   **Custom Agent:** Specialized worker (SDK).
-*   **OODA Loop:** Observe, Orient, Decide, Act.
+### 2. Critical Analysis & Rationale
+*   **Ontological Precision:** In AI, words like "Agent," "Assistant," and "Tool" are used loosely. In the Factory, they have strict technical definitions. Using the wrong word leads to architectural bugs.
 
----
+### 3. Step-by-Step Explanation
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+#### a. Basic Insights
+*   **MCP:** Model Context Protocol. (The Standard).
+*   **Agent Skill:** Modular folder with `SKILL.md`. (The Asset).
+*   **Digital FTE:** Autonomous AI worker. (The Product).
+*   **SDD:** Spec-Driven Development. (The Method).
+*   **General Agent:** Flexible builder. (The Architect).
+*   **Custom Agent:** Specialized worker. (The Employee).
+*   **OODA Loop:** Observe, Orient, Decide, Act. (The Algorithm).
 
-#### 1. Objective
-To ensure everyone is speaking the same language. Confusion over terms leads to bugs in code.
+#### b. Advanced Insights (Deeper Look)
+*   **The "Agent" Definition:** An entity with an OODA loop. If it doesn't loop, it's not an agent; it's a script.
+*   **The "Skill" Definition:** A portable unit of procedural knowledge. If it can't be zipped and moved, it's not a Skill.
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Memorize the acronyms.
-*   **Advanced Insights:** **Ontological Precision.** In AI, words like "Agent," "Assistant," and "Tool" are used loosely. In the Factory, they have strict technical definitions. An "Agent" has an OODA loop; a "Tool" is a single function. A "Skill" is a collection of Tools + Instructions. Using this glossary correctly is the first step to **Domain Mastery**.
+### 4. When to Use?
+*   **Onboarding:** The first document a new hire reads.
+*   **Specs:** Use these exact terms in your `SPEC.md`.
 
-#### 3. Examples
-*   **Basic:** "What is an MCP?"
-*   **Intermediate:** Using the terms correctly in a PR description.
-*   **PhD / Advanced:** **Semantic Mapping.** Building an "Agent Ontology" where every term is defined in a machine-readable format (JSON-LD), allowing agents to "Understand" the architecture they are part of.
+### 5. Examples
 
-#### 4. Implementation in Agentic AI
+#### a. Basic (Definition)
+*   *Q:* "What is an MCP?"
+*   *A:* "A standard way to connect data to LLMs."
+
+#### b. Intermediate (Usage)
+*   *Action:* Using terms correctly in a Pull Request description.
+
+#### c. PhD / Advanced (Semantic Mapping)
+*   *Concept:* **Machine-Readable Ontology.**
+*   *Scenario:* Building an "Agent Ontology" where every term is defined in a machine-readable format (JSON-LD), allowing agents themselves to "Understand" the architecture they are part of and reason about their own components ("I am missing my 'Skill' component").
+
+### 6. Implementation in Agentic AI
 *   **Document:** Keep this glossary in your `AGENTS.md`.
 
-#### 5. Why This Matters?
-*   **Communication:** Prevents time-wasting arguments with stakeholders.
+### 7. Why This Matters?
+*   **Communication:** Prevents time-wasting arguments with stakeholders ("Is this an agent or a bot?").
 
-#### 6. Architecture Deep Dive
+### 8. What Problem Does It Solve?
+*   **Ambiguity:** "Tower of Babel" scenarios where team members talk past each other.
+
+### 9. Architecture Deep Dive
 *   **The Meta-Model:** These terms represent the "Metadata" of the factory.
 
-#### 7. Reflection Questions
-*   *Do you and your team agree on what an 'Agent' is?*
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Making up your own words.
+    *   *Correction:* Use the industry standard terms defined here.
+*   **Practice:** "Glossary Check." If you use a word not on this list, define it.
+
+### 11. Reflection Questions
+1.  *Do you and your team agree on what an 'Agent' is?*
+2.  *Can you define 'Digital FTE' in one sentence?*
