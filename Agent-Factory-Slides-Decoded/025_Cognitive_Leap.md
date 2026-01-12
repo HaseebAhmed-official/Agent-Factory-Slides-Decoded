@@ -1,51 +1,64 @@
-# Slide 25: The Cognitive Leap: From "Prediction" to "Reasoning"
+# Slide 25: The Cognitive Leap: From Prediction to Reasoning
 
 ## Core Message
 **The Brain Upgrade: OODA Loops in Silicon**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To explain the fundamental architectural shift that makes "Agents" possible. We are moving from **Predictive Models** (Next Token Prediction) to **Reasoning Engines** (Iterative Problem Solving).
 
-#### 1. Traditional Coding Agents (Predictive-centric)
-*   **Logic:** "Based on the last 10 lines, what is the most likely next line?"
-*   **Behavior:** Autocomplete.
-*   **Limit:** They cannot "fix" themselves. If they make a mistake, they keep predicting based on the mistake.
+### 2. Critical Analysis & Rationale
+*   **Prediction vs. Intent:** Prediction is a mirror of the past. Reasoning is a bridge to the future goal.
+*   **The "System 2" AI:** Predictive AI is "System 1" (Fast, intuitive, error-prone). Agentic AI is "System 2" (Slow, deliberate, logical, self-correcting).
 
-#### 2. General Agents (Reasoning Loop)
-*   **Logic:** Uses an **OODA Loop** (Observe, Orient, Decide, Act).
-*   **The Workflow:**
-    1.  **Observe:** "I see an error in the logs."
-    2.  **Decide:** "I will check if the Docker container is running."
-    3.  **Act:** Executes a Docker command.
-    4.  **Correct:** "That didn't work, let me try a different flag."
+### 3. Step-by-Step Explanation
 
----
+#### a. Basic Insights
+*   **Prediction (The Parrot):** "Based on these 10 lines, what's next?" (Statistical).
+*   **Reasoning (The Scientist):** "The code failed. Why? Let me check logs. Ah, a timeout. Let me increase the timeout and retry." (Logical loop).
+*   **The Leap:** The ability to *stop, think, and correct* before answering.
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+#### b. Advanced Insights
+*   **Chain of Thought (CoT):** The mechanism of reasoning. The model "talks to itself" in hidden tokens to plan the answer.
+*   **Test-Time Compute:** We can now trade *time* for *intelligence*. Letting the agent "think" for 10 seconds (running a loop) results in a smarter answer than an instant response.
+*   **The OODA Loop:** Observe (Error log), Orient (Context), Decide (Fix plan), Act (Edit file).
 
-#### 1. Objective
-To explain the architectural shift from **Predictive Models** (Next Token Prediction) to **Reasoning Engines** (Iterative Problem Solving).
+### 4. When to Use?
+*   **Complex Tasks:** Math, Coding, Legal Analysis. (Requires Reasoning).
+*   **Novel Situations:** Where there is no existing template to "predict" from.
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Prediction = Parrot ("Mat"). Reasoning = Scientist ("Let me check..."). The leap is the ability to *stop, think, and correct*.
-*   **Advanced Insights:** **Chain of Thought (CoT):** The mechanism of reasoning. **System 1 vs System 2:** LLMs are System 1 (Fast/Intuitive). Agents are System 2 (Slow/Deliberate). **Test-Time Compute:** Trading time for intelligence.
+### 5. Examples
 
-#### 3. Examples
-*   **Basic:** Math. Prediction guesses. Reasoning calculates step-by-step.
-*   **Intermediate:** Coding. Prediction writes buggy code. Reasoning runs it, sees error, fixes it.
-*   **PhD / Advanced:** **Tree of Thoughts (ToT).** Agent explores multiple branches ("Strategy A vs B"), simulates them, backtracks if A fails, and proceeds with B.
+#### a. Basic (The Math Error)
+*   *Prediction:* 23 * 45 = "About 1000."
+*   *Reasoning:* "20*40=800, 3*5=15... wait... 23*40=920, 23*5=115... total 1035."
 
-#### 4. Implementation in Agentic AI
-*   **The Loop:** `while` loops wrapping the LLM call.
-*   **Reflection:** Prompting "Review your previous step."
+#### b. Intermediate (The Bug Fix)
+*   *Prediction:* Writes code that *looks* right but has a syntax error.
+*   *Reasoning:* Writes code -> Runs it -> Sees error -> Fixes it -> Success.
 
-#### 5. Why This Matters?
-*   **Reliability:** Prediction is probabilistic. Reasoning seeks determinism.
-*   **Autonomy:** Reasoning allows agents to fix their own messes.
+#### c. PhD / Advanced (Scientific Discovery)
+*   *Concept:* **Tree of Thoughts (ToT).**
+*   *Scenario:* The agent explores multiple branches of a solution. "If I try Strategy A, the server load spikes. Let me backtrack and try Strategy B." This is **Search** combined with **Reasoning**.
 
-#### 6. Architecture Deep Dive
-*   **Inference-Time Search:** Using RL to search thought paths (OpenAI o1).
-*   **OODA Loop:** Observe, Orient, Decide, Act.
+### 6. Implementation in Agentic AI
+*   **The Loop:** `while not finished: think -> act -> observe`.
+*   **Self-Reflection:** Prompting the agent to critique its own previous step.
 
-#### 7. Reflection Questions
-*   *Are you optimizing for Speed or Accuracy?*
-*   *Does your system allow the AI to 'Backtrack'?*
+### 7. Why This Matters?
+*   **Reliability:** Prediction is probabilistic (80% accurate). Reasoning is deterministic-seeking (aiming for 100%).
+*   **Autonomy:** You can't leave a predictor alone. You *can* leave a reasoner alone.
+
+### 8. What Problem Does It Solve?
+*   **Fragility:** Old AI broke when it encountered something new. Reasoning AI "figures it out."
+
+### 9. Architecture Deep Dive
+*   **Inference-Time Search:** Using Reinforcement Learning to "search" for the right thought path at runtime (e.g., OpenAI o1).
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Expecting instant answers.
+    *   *Correction:* Reasoning takes time. Show "Thinking..." to the user.
+*   **Practice:** "Show your work." Force the agent to output its reasoning logs.
+
+### 11. Reflection Questions
+1.  *Are you optimizing for Speed (Prediction) or Accuracy (Reasoning)?*
+2.  *Does your system allow the AI to 'Backtrack' and correct itself?*

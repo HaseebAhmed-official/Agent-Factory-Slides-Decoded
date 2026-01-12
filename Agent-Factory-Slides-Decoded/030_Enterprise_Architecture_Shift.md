@@ -1,52 +1,63 @@
 # Slide 30: Enterprise Architecture Shift
 
 ## Core Message
-**From SaaS Tools to Digital FTEs**
+**From SaaS Tools to Digital FTEs: The New Org Chart**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To visualize the radical transformation of the enterprise. Moving from a "Tool-Centric" model (where humans use software) to an "Agent-Centric" model (where humans manage digital labor).
 
-#### 1. Comparison
-| Feature | Before: Tool-Centric | After: Agent-Centric |
-| :--- | :--- | :--- |
-| **Operation** | Humans operate SaaS tools. | Humans manage outcomes. |
-| **Logic** | Logic lives in people's heads. | Logic lives in **Specs & Skills**. |
-| **Automation** | Brittle and task-level. | **Goal-driven**. |
-| **Knowledge** | Undocumented and unscalable. | Reusable **Intellectual Property (IP)**. |
-| **Workflow** | Humans -> Apps -> APIs -> Data. | **Humans -> Digital FTEs -> Skills + MCP -> Data.** |
+### 2. Critical Analysis & Rationale
+*   **The Unit of Value:** In the old model, value is "Efficiency" (Software makes humans faster). In the new model, value is "Output" (Agents do the work).
+*   **IP Capture:** This shift allows companies to own their "Operational Logic" as a digital asset rather than having it reside in employees' heads.
 
-#### 2. The Key Shift
-**"From tools you use -> digital teammates you manage"**
+### 3. Step-by-Step Explanation
 
-#### 3. Implications
-*   **Codification:** Knowledge is codified in `SKILL.md`, becoming a permanent asset.
-*   **Management:** Human job moves from "Typing" to "Managing outcomes."
+#### a. Basic Insights
+*   **Before (SaaS):** Humans operate tools. Logic is in heads. Automation is brittle.
+*   **After (Agents):** Humans manage outcomes. Logic is in **Specs & Skills**. Automation is goal-driven.
+*   **The Shift:** From "Tools you use" to "Digital Teammates you manage."
 
----
+#### b. Advanced Insights
+*   **The API Economy Collapse:** Traditional SaaS apps become "Headless" backends. The GUI (Graphical User Interface) is bypassed. Agents talk to APIs directly.
+*   **Knowledge Liquidation:** Turning "Tacit Knowledge" (experience) into "Explicit Assets" (`SKILL.md`). This increases the enterprise value of the company.
+*   **Elastic Headcount:** You can "Hire" 1,000 Digital FTEs for a surge in work and "Fire" them 2 hours later. Human labor is inelastic; Digital labor is perfectly elastic.
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+### 4. When to Use?
+*   **Strategic Planning:** When deciding whether to buy a new software license or build an agent skill.
+*   **Change Management:** Explaining to employees that their role is shifting from "Doer" to "Manager."
 
-#### 1. Objective
-To visualize the architectural transformation of the Enterprise. Moving from a "Tool-Centric" model (SaaS) to an "Agent-Centric" model (Digital Labor).
+### 5. Examples
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Before: Humans use tools. After: Humans manage agents who use tools.
-*   **Advanced Insights:** **IP Capture.** In the old model, if an employee leaves, knowledge leaves. In the new model, knowledge is captured in the Spec/Skill. **API Economy.** SaaS apps become "Headless" backends for agents.
+#### a. Basic (CRM)
+*   *Before:* Sales rep manually types notes into Salesforce.
+*   *After:* Sales Agent listens to the meeting, updates Salesforce, and drafts the follow-up email. Rep just clicks "Approve."
 
-#### 3. Examples
-*   **Basic:** Old: Sales rep clicks in Salesforce. New: Sales Agent updates Salesforce via API.
-*   **Intermediate:** Old: Analyst writes Excel formulas. New: Analyst tells Finance Agent to "Audit Q3."
-*   **PhD / Advanced:** **The Autonomic Enterprise.** A company where the "Org Chart" is a software graph. Humans sit at the "Board Level" setting goals; the entire operational layer is Agentic.
+#### b. Intermediate (Finance)
+*   *Before:* Accountant spends 3 days reconciling invoices in Excel.
+*   *After:* Finance Agent runs a "Reconciliation Skill," flags 3 anomalies, and presents them to the Accountant for judgment.
 
-#### 4. Implementation in Agentic AI
-*   **Middleware:** The Agent Layer sits between Humans and Data/Apps.
+#### c. PhD / Advanced (The Autonomic Enterprise)
+*   *Concept:* **The Zero-Employee Department.**
+*   *Scenario:* A company's "Compliance Department" has zero human staff. It is an ecosystem of 50 agents that monitor every transaction, read every new regulation, update their own "Compliance Skill," and only alert the CEO if a critical legal risk is detected.
 
-#### 5. Why This Matters?
-*   **Asset Value:** The company builds a "Knowledge Base" that actually *works*.
-*   **Scalability:** You can scale the "After" model instantly (spin up more containers).
+### 6. Implementation in Agentic AI
+*   **Architecture:** Moving logic from the "Frontend" (UI) to the "Knowledge Layer" (Skill folders).
 
-#### 6. Architecture Deep Dive
-*   **Layers:** Human -> Interface -> Agent (Skill) -> Protocol (MCP) -> Infrastructure (SaaS/DB).
+### 7. Why This Matters?
+*   **Scalability:** You can scale to millions of customers without scaling your human payroll.
+*   **Valuation:** Businesses with "Codified Expertise" (Assets) are worth more than businesses with "Human Expertise" (Rent).
 
-#### 7. Reflection Questions
-*   *Does your company own its processes (Skills) or do they live in employees' heads?*
-*   *Are you buying tools or hiring digital labor?*
+### 8. What Problem Does It Solve?
+*   **The "Knowledge Walk-out":** When a key employee leaves, the company doesn't lose the process; the process is in the `SKILL.md`.
+
+### 9. Architecture Deep Dive
+*   **The Stack:** Human -> Managerial Interface -> Digital FTE (Agent) -> Skill + MCP -> Data.
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Buying more SaaS tools to solve a labor problem.
+    *   *Correction:* Build an Agent Skill to use your *existing* tools more effectively.
+*   **Practice:** "Spec-First Migration." Document every human process as a Spec before attempting to automate.
+
+### 11. Reflection Questions
+1.  *Does your company own its processes, or are they rented from employees' brains?*
+2.  *Are you building an 'App' or a 'Teammate'?*

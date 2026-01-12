@@ -1,48 +1,69 @@
 # Slide 27: Infinite Extensibility via MCP and Agent Skills
 
 ## Core Message
-**Breaking the "Coder" Stereotype via Connectivity**
+**The "USB Port" for AI: Breaking the Coder Stereotype**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To explain how we turn a generic "Brain" (LLM) into a specialized "Expert" (Agent) without retraining. The combination of **MCP (Connectivity)** and **Skills (Knowledge)** allows for infinite role extensibility.
 
-#### 1. The Enabler: MCP and Agent Skills
-A General Agent isn't just a coder; it's a **Shape-Shifter**. Its role is defined by its "Hands" (MCP) and its "Knowledge" (Skills).
+### 2. Critical Analysis & Rationale
+*   **Intelligence vs. Capability:** An LLM is intelligent but capable of nothing. MCP and Skills are the "Hands" and "Knowledge" that make intelligence useful.
+*   **Decoupling:** Standardizing the interface (MCP) ensures that your "Audit Skill" works regardless of whether you use Claude, GPT, or Llama.
 
-#### 2. Expanding the Role
-*   **Slack MCP + Skill** -> Communications Manager.
-*   **Salesforce MCP + Skill** -> RevOps Specialist.
-*   **QuickBooks MCP + Skill** -> Financial Auditor.
+### 3. Step-by-Step Explanation
 
-#### 3. The Verdict
-"A strictly defined 'Coding Agent' cannot send messages or audit finances. A General Agent can, provided you give it the right 'hands' (MCP) and 'procedures' (Agent Skill)."
+#### a. Basic Insights
+*   **The Problem:** LLMs are "Brains in a Jar." They can't touch your data.
+*   **The Solution (MCP):** A standard protocol to plug in tools (Slack, GitHub, SQL).
+*   **The Solution (Skills):** Standardized instructions (How to be an Accountant).
+*   **The Result:** A shape-shifting agent.
 
----
+#### b. Advanced Insights
+*   **Dynamic Role Adoption:** You can "hot-swap" skills. Today the agent is a Coder (Load Coder Skill). Tomorrow it is a Finance Auditor (Load Audit Skill).
+*   **The Ecosystem Effect:** Standards allow for a marketplace of "Expertise Packs." You don't build the integration; you download the MCP server.
+*   **Context Optimization:** Instead of stuffing 50 tools into one prompt, use Skills to load only the *relevant* tools for the current task.
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+### 4. When to Use?
+*   **Enterprise Integration:** "How do I connect AI to my legacy CRM?" -> Build an MCP Server.
+*   **Expert Workflows:** "How do I make the AI follow our specific tax rules?" -> Write an Agent Skill.
 
-#### 1. Objective
-To explain how we turn a generic "Brain" (LLM) into a specialized "Expert" (Agent) without retraining. The combination of **MCP (Connectivity)** and **Skills (Knowledge)** allows infinite extensibility.
+### 5. Examples
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** LLMs are "Brains in a Jar." MCP plugs in tools; Skills plug in instructions.
-*   **Advanced Insights:** **Decoupling.** We decouple Intelligence (LLM) from Capability (Code). **Dynamic Loading.** Hot-swap skills to change roles. **App Store Effect.** Ecosystems of MCP Servers and Skill Packs.
+#### a. Basic (The File Manager)
+*   *MCP:* Local Filesystem Server.
+*   *Skill:* "Organize Desktop" logic.
+*   *Result:* Agent that cleans your computer.
 
-#### 3. Examples
-*   **Basic:** File Reader (MCP) + Summarize Skill = Document Analyst.
-*   **Intermediate:** GitHub + AWS + Slack MCPs + Deployment Skill = DevOps Bot.
-*   **PhD / Advanced:** **Composable Agency.** An agent discovers and connects to 1,000 MCP servers in a registry to solve a novel task ("Plan a wedding"), downloading the "Wedding Planner Skill" on the fly.
+#### b. Intermediate (The RevOps Bot)
+*   *MCP:* Salesforce + Slack + Stripe.
+*   *Skill:* "Sales Lead Qualification" logic.
+*   *Result:* Agent that qualifies leads and notifies the team.
 
-#### 4. Implementation in Agentic AI
-*   **Protocol:** JSON-RPC.
-*   **Structure:** Client (Agent) <-> Server (Tool).
+#### c. PhD / Advanced (Autonomous Supply Chain)
+*   *Concept:* **Composable Multi-Protocol Agency.**
+*   *Scenario:* Agent has access to a registry of 1,000 MCP servers. When a goal is set ("Optimize shipping costs"), it *discovers* and *connects* to the Weather MCP, the Logistics MCP, and the Fuel Price MCP, then downloads the "Optimization Skill" to solve the problem.
 
-#### 5. Why This Matters?
-*   **Standardization:** Plug-and-play integration.
-*   **Scale:** Build a library of tools usable by any agent.
+### 6. Implementation in Agentic AI
+*   **Protocol:** JSON-RPC based communication between Agent (Client) and Tool (Server).
+*   **Format:** `claude_config.json` or equivalent.
 
-#### 6. Architecture Deep Dive
-*   **MCP Architecture:** Hosts, Clients, Servers, Resources, Prompts, Tools.
+### 7. Why This Matters?
+*   **Vendor Independence:** Your IP lives in the Skill/MCP, not the LLM provider.
+*   **Scalability:** Build a tool once, use it in 100 different agents.
 
-#### 7. Reflection Questions
-*   *Are you writing custom API wrappers or standard MCP servers?*
-*   *What 'Skills' can you package?*
+### 8. What Problem Does It Solve?
+*   **The "Context Window" Limit:** You don't paste your whole database into the prompt. You use MCP to query it.
+
+### 9. Architecture Deep Dive
+*   **MCP Hosts:** (Claude Desktop, IDE).
+*   **MCP Servers:** (The Python/Node app wrapping the tool).
+*   **Resources/Tools/Prompts:** The three primitives of MCP.
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Building one giant "God MCP" with 100 tools.
+    *   *Correction:* Modularize. One MCP for Jira, one for GitHub.
+*   **Practice:** "Least Privilege." Give the agent access only to the MCPs it needs for the task.
+
+### 11. Reflection Questions
+1.  *Are you writing custom glue code or standard MCP servers?*
+2.  *What 'Skills' does your company have that could be packaged into a folder?*
