@@ -3,41 +3,62 @@
 ## Core Message
 **The Winning Toolkit for 2026: The "Goldilocks" Stack**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To provide a concrete, actionable technology recommendation to end "Analysis Paralysis." With 1,000 new AI tools every week, developers need a definitive "Stack" to bet on.
 
-#### 1. The Recommendation
-1.  **Build Phase:** **Claude Code** + **Spec Kit Plus**. (Fastest generation).
-2.  **Production Phase:** **OpenAI/Anthropic Agent SDKs**. (Reliability/Guardrails).
-3.  **Connectivity:** **MCP** exclusively. (Standardization).
+### 2. Critical Analysis & Rationale
+*   **The "Best of Both Worlds" Strategy:** General Agents (Claude Code) are too unconstrained for production (security risk). SDKs (OpenAI) are too tedious for rapid prototyping.
+*   **The Synthesis:** Use the General Agent as the **Compiler** and the SDK as the **Target Binary**. You get the speed of AI creation with the safety of code execution.
 
-#### 2. The Strategy
-"Use the General Agent to manufacture the Custom Agent."
+### 3. Step-by-Step Explanation
 
----
+#### a. Basic Insights
+1.  **Build Phase:** **Claude Code** + **Spec Kit Plus**. (Fastest generation of logic).
+2.  **Production Phase:** **OpenAI/Anthropic Agent SDKs**. (Reliability, Guardrails, Type Safety).
+3.  **Connectivity:** **MCP** exclusively. (Standardization, Portability).
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+#### b. Advanced Insights (Deeper Look)
+*   **Why Claude for Build?** Claude 3.5 Sonnet currently has the best "Reasoning/Coding" capability for *writing* software. It is the best "Architect."
+*   **Why SDKs for Prod?** SDKs allow you to define strict **Type Signatures** and **State Management**. They are deterministic wrappers around the probabilistic model.
+*   **Why MCP?** It prevents you from writing custom API glue code. It is the "Driver Layer."
 
-#### 1. Objective
-To provide a concrete, actionable technology recommendation to end "Analysis Paralysis."
+### 4. When to Use?
+*   **Technology Selection:** When starting a new project.
+*   **Debate Resolution:** Ending arguments about "LangChain vs. Semantic Kernel." (Answer: Use the native SDKs + MCP).
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Use Claude to build, use SDKs to run.
-*   **Advanced Insights:** **The "Best of Both Worlds" Strategy.** General Agents (Claude Code) are too unconstrained for production (security risk). SDKs (OpenAI) are too tedious for rapid prototyping. By using the General Agent as the **Compiler** and the SDK as the **Target Binary**, you get the speed of AI with the safety of code.
+### 5. Examples
 
-#### 3. Examples
-*   **Basic:** Prompting Claude to write an OpenAI SDK script.
-*   **Intermediate:** Building a "Factory Pipeline" where you feed a Markdown file to a GitHub Action that uses Claude Code to generate a production-ready bot.
-*   **PhD / Advanced:** **Cross-Provider Redundancy.** A stack where the Factory manufactures two versions of the agent: one for OpenAI and one for Anthropic. The system monitors "Latent Bias" and switches providers if one starts failing its Evals.
+#### a. Basic (The Script)
+*   *Action:* Prompting Claude to write an OpenAI SDK script.
 
-#### 4. Implementation in Agentic AI
+#### b. Intermediate (The Factory Pipeline)
+*   *Action:* Building a GitHub Action that uses Claude Code to read a `SPEC.md` and generate a production-ready bot using the Anthropic SDK.
+
+#### c. PhD / Advanced (Cross-Provider Redundancy)
+*   *Concept:* **Model Arbitrage.**
+*   *Scenario:* A stack where the Factory manufactures two versions of the agent: one for OpenAI and one for Anthropic. The production system monitors "Latent Bias" and "Error Rates" in real-time and switches providers if one starts failing its Evals or if one provider raises prices.
+
+### 6. Implementation in Agentic AI
 *   **Stack:** `claude-code` (Dev) -> `openai-agents-python` (Prod) -> `mcp-sdk` (Bridge).
 
-#### 5. Why This Matters?
+### 7. Why This Matters?
 *   **Velocity:** You stop debating "Which tool?" and start building.
+*   **Stability:** You rely on the official SDKs of the giants, not fragile third-party abstractions.
 
-#### 6. Architecture Deep Dive
-*   **Development Lifecycle:** `Local Dev (General Agent)` -> `Staging (SDK + Evals)` -> `Production (SDK + Monitoring)`.
+### 8. What Problem Does It Solve?
+*   **The "Framework Fatigue":** Developers are tired of learning new frameworks that die in 6 months. This stack focuses on "Native" tools.
 
-#### 7. Reflection Questions
-*   *Are you using the same tool for 'Thinking' and 'Doing'? (Maybe you shouldn't).*
-*   *Is your connectivity logic locked into one vendor's proprietary API?*
+### 9. Architecture Deep Dive
+*   **The Lifecycle:**
+    *   **Local Dev:** General Agent (Fluid, Creative).
+    *   **Staging:** SDK + Evals (Strict, Tested).
+    *   **Production:** SDK + Monitoring (Scaled, Locked).
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Building your production agent *inside* the General Agent (e.g., trying to run a business on a Claude Chat).
+    *   *Correction:* Use the Chat to *build* the Code. Run the Code.
+*   **Practice:** "Native First." Always try to use the model provider's native SDK before reaching for a complex framework.
+
+### 11. Reflection Questions
+1.  *Are you using the same tool for 'Thinking' and 'Doing'? (Maybe you shouldn't).*
+2.  *Is your connectivity logic locked into one vendor's proprietary API or are you using MCP?*

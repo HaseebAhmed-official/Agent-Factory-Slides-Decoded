@@ -3,42 +3,61 @@
 ## Core Message
 **How Agent Factories Fail: Avoiding the Trap**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To provide a "Post-Mortem" before the project starts. This slide lists the most common reasons Agent projects fail, so you can avoid them.
 
-#### 1. Top 4 Pitfalls
-1.  **Over-Automating Too Fast:** Building "CEO Agent" before the "Data Entry Agent."
+### 2. Critical Analysis & Rationale
+*   **Complexity Creep:** Agents are complex systems. Complexity breeds bugs. The most common failure mode is building a system too complex to debug.
+*   **The "Silent Failure":** Unlike code, which crashes (loud failure), agents often just start talking nonsense or looping (silent failure). This burns money and trust.
+
+### 3. Step-by-Step Explanation
+
+#### a. Basic Insights
+1.  **Over-Automating Too Fast:** Building the "CEO Agent" before the "Data Entry Agent." Start small.
 2.  **Ignoring Edge Cases:** Assuming data is always perfect.
-3.  **No Monitoring:** The "Silent Failure" where the agent burns tokens doing the wrong thing.
-4.  **Vendor Lock-in:** Building in a format that only works on one platform.
+3.  **No Monitoring:** The agent burns tokens doing the wrong thing.
+4.  **Vendor Lock-in:** Building in a proprietary format.
 
-#### 2. The Warning
-"The most dangerous agent is **Confident and Wrong**. You need Checks and Balances."
+#### b. Advanced Insights (Deeper Look)
+*   **The "Recursive Spend" Trap:** An agent gets stuck in a loop: "I failed, let me retry. I failed again, let me retry..." Each retry costs $1.00. Without a `max_retries` guardrail, a simple bug can cost $10,000 in a single night.
+*   **Semantic Drift:** Over a long conversation, the agent's understanding of the goal "drifts" away from the original Spec as the context window fills with noise.
+*   **The "Confident Hallucination":** The most dangerous agent is one that is wrong but sounds right.
 
----
+### 4. When to Use?
+*   **Code Review:** Checking for these pitfalls.
+*   **Project Planning:** Setting realistic expectations.
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+### 5. Examples
 
-#### 1. Objective
-To provide a "Post-Mortem" before the project starts.
+#### a. Basic (No Limits)
+*   *Failure:* Forgetting to set a token limit. Agent generates infinite text.
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Start small, watch the logs, use standards.
-*   **Advanced Insights:** **The "Recursive Spend" Trap.** An agent gets stuck in a loop: "I failed, let me retry. I failed again, let me retry..." Each retry costs $1.00. Without a `max_retries` guardrail, a simple bug can cost $10,000 in a single night. **Semantic Drift.** Over a long conversation, the agent's understanding of the goal "drifts" away from the original Spec.
+#### b. Intermediate (Hard-coding)
+*   *Failure:* Hard-coding API keys in the prompt. (Security pitfall).
 
-#### 3. Examples
-*   **Basic:** Forgetting to set a token limit.
-*   **Intermediate:** Hard-coding API keys in the prompt (Security pitfall).
-*   **PhD / Advanced:** **Prompt Fragility.** Relying on a "Magic Phrase" that works in GPT-4 but causes a total logic collapse in Claude 3.5. Solution: Use **Agent Skills** (Standardized Logic) and **Evals** (Cross-Model testing).
+#### c. PhD / Advanced (Prompt Fragility)
+*   *Concept:* **Model Overfitting.**
+*   *Failure:* You spend weeks optimizing a prompt for GPT-4. OpenAI updates the model to GPT-4-Turbo. Your prompts break because they relied on specific quirks of the old model.
+*   *Solution:* Use **Agent Skills** (Standardized Logic) and **Evals** (Cross-Model testing) to ensure robustness.
 
-#### 4. Implementation in Agentic AI
-*   **Checklist:** A pre-deployment checklist for every agent.
+### 6. Implementation in Agentic AI
+*   **Checklist:** A pre-deployment checklist for every agent (Limits set? Monitoring on? Keys secure?).
 
-#### 5. Why This Matters?
+### 7. Why This Matters?
 *   **Economic Survival:** Managing the "Burn Rate" of your agents.
+*   **Longevity:** Building systems that survive model updates.
 
-#### 6. Architecture Deep Dive
-*   **The Watchdog Pattern:** A low-cost "Supervisor Agent" that does nothing but monitor the "Worker Agent" for loops or nonsense.
+### 8. What Problem Does It Solve?
+*   **The "Trough of Disillusionment":** Prevents the project from failing after the initial hype wears off.
 
-#### 7. Reflection Questions
-*   *What is your 'Kill Switch' for runaway token spend?*
-*   *Are you building 'Disposable Scripts' or 'Maintainable Systems'?*
+### 9. Architecture Deep Dive
+*   **The Watchdog Pattern:** A low-cost "Supervisor Agent" (or simple script) that does nothing but monitor the "Worker Agent" logs. If the Worker loops 3 times, the Watchdog kills it.
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Testing only on "Happy Paths."
+    *   *Correction:* Spend 80% of time testing "Unhappy Paths" (Network down, bad data, API errors).
+*   **Practice:** "Chaos Engineering." Intentionally break tools to see if the agent recovers gracefully.
+
+### 11. Reflection Questions
+1.  *What is your 'Kill Switch' for runaway token spend?*
+2.  *Are you building 'Disposable Scripts' or 'Maintainable Systems'?*
