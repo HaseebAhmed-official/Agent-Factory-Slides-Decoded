@@ -1,48 +1,67 @@
 # Slide 17: Redefining Everything
 
 ## Core Message
-**How Agentic AI Transforms Work, Transactions, and Building**
+**The Societal Impact of Agentic AI**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To zoom out from the technical details and look at the macro-level impact on Society, Economy, and Development. This slide frames the "Agent Factory" as a driver of civilization-level change.
 
-#### The Three Transformations
-1.  **How We Work:**
-    *   **Shift:** AI agents as **Collaborative Teammates**.
-    *   **Impact:** We stop being "doers" and start being "managers." Team size increases without headcount.
-2.  **How We Transact:**
-    *   **Shift:** Autonomous systems managing **Complex Transactions**.
-    *   **Impact:** Agents negotiate prices, manage supply chains. The "Sales Cycle" becomes machine-to-machine.
-3.  **How We Build:**
-    *   **Shift:** AI-first development from **High-Level Intent**.
-    *   **Impact:** We build software by describing it. The "Factory" model replaces the "Studio" model.
+### 2. Critical Analysis & Rationale
+*   **The Acceleration:** When agents can build agents (Recursive Self-Improvement), the rate of technological progress detaches from human biological limits (Sleep, Learning Speed).
+*   **The Frictionless Economy:** Agents remove the "Human Latency" from transactions.
 
----
+### 3. Step-by-Step Explanation
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+#### a. Basic Insights
+1.  **How We Work:** From "Doing" to "Managing." The 4-hour workweek becomes plausible for execution, but the "Thinking" work increases.
+2.  **How We Transact:** Machine-to-Machine commerce. Agents negotiating with Agents.
+3.  **How We Build:** Intent-based creation. The end of the "Coder" as a craftsman; the rise of the "Coder" as a Director.
 
-#### 1. Objective
-To zoom out to the macro-level impact on Society and Economy. Framing the "Agent Factory" as a driver of civilization-level change.
+#### b. Advanced Insights
+*   **The "Transaction" Revolution:** Currently, B2B sales involve humans emailing humans. In 2026, a "Buyer Agent" will issue an RFP (Request for Proposal), and 50 "Seller Agents" will bid instantly. The economy speeds up.
+*   **The "Builder" Revolution:** When software becomes cheap to build, *disposable software* becomes a thing. You might build an app just for one weekend event and then delete it.
+*   **The "Work" Revolution:** The definition of "Productivity" changes. It's no longer "Hours worked" but "Agents deployed."
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Work becomes Managing. Transactions become Automated. Building becomes Intent-based.
-*   **Advanced Insights:** **Machine-to-Machine Commerce**: In 2026, a "Buyer Agent" issues an RFP, and 50 "Seller Agents" bid instantly. **Disposable Software**: When building is cheap, we will build apps for single events and delete them. **Productivity**: Defined by "Agents deployed," not "Hours worked."
+### 4. When to Use?
+*   **Vision Setting:** When inspiring a team or writing a manifesto.
+*   **Risk Analysis:** When considering the impact of "Agent Swarms" on your industry (e.g., if you are in Sales, your job is about to change).
 
-#### 3. Examples
-*   **Basic:** Old: Answer 50 emails. New: Approve 50 drafts.
-*   **Intermediate:** Old: Search Expedia for 2 hours. New: "Travel Agent" negotiates group rate with "Hotel Agent" via API.
-*   **PhD / Advanced:** **Self-Evolving Software.** Software detects a bug, the internal "Builder Agent" writes a fix, runs tests, and deploys the update without human intervention.
+### 5. Examples
 
-#### 4. Implementation in Agentic AI
-*   **Protocols:** Agent-to-Agent payment standards (Crypto/Lightning).
-*   **Trust:** Reputation systems for automated commerce.
+#### a. Basic (Work)
+*   *Old:* You answer 50 emails.
+*   *New:* You approve 50 draft replies your agent wrote.
 
-#### 5. Why This Matters?
+#### b. Intermediate (Transaction)
+*   *Old:* You search Expedia for 2 hours.
+*   *New:* Your "Travel Agent" negotiates a group rate with the "Hotel Agent" via API.
+
+#### c. PhD / Advanced (Build)
+*   *Concept:* **Self-Evolving Software.**
+*   *Scenario:* The software detects a bug in itself (via user report), the "Builder Agent" inside the software writes a fix, runs tests, and deploys the update without the human developer even waking up. The software "heals" itself.
+
+### 6. Implementation in Agentic AI
+*   **Agent-to-Agent Protocols:** We need standards for agents to pay each other (Crypto/Lightning Network?).
+*   **Trust Frameworks:** How do I trust the "Seller Agent" isn't lying? (Reputation systems).
+
+### 7. Why This Matters?
 *   **Speed:** Everything accelerates. Development, Sales, Execution.
-*   **Disruption:** Breaks "Middleman" business models.
+*   **Disruption:** This will break many existing business models (especially "Middleman" businesses).
 
-#### 6. Architecture Deep Dive
-*   **Agent Economy Layer:** Identity (DID), Payment (Wallet), Communication (Agent Protocol).
+### 8. What Problem Does It Solve?
+*   **Friction:** It removes the friction of human latency from the economy.
 
-#### 7. Reflection Questions
-*   *If your customers are Agents, not Humans, how does your marketing change? (SEO for Agents).*
-*   *Are you building a business that requires 'Human Latency' to survive?*
+### 9. Architecture Deep Dive
+*   **The Agent Economy Layer:**
+    *   **Identity:** DID (Decentralized Identity).
+    *   **Payment:** Wallet (USDC/Bitcoin).
+    *   **Communication:** Agent Protocol (OpenAI/Microsoft specs).
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Thinking this is Sci-Fi.
+    *   *Correction:* High-Frequency Trading (HFT) is already "Agentic Commerce." We are just bringing that speed to the rest of the economy.
+*   **Practice:** "Future-Proofing." Build APIs for your business now, so Agents can buy from you later.
+
+### 11. Reflection Questions
+1.  *If your customers are Agents, not Humans, how does your marketing change? (SEO for Agents).*
+2.  *Are you building a business that requires 'Human Latency' to survive?*

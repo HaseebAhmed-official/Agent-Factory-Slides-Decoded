@@ -1,51 +1,68 @@
 # Slide 20: General Agents (Claude Code, Goose)
 
 ## Core Message
-**The Power of Generalization: The Digital Polymath**
+**The Rise of the Digital Polymath**
 
-### Detailed Analysis (Original Context)
+### 1. Objective
+To deep dive into "Option A": The General Agent. To explain what makes tools like Claude Code and Goose different from standard chatbots—specifically their ability to access the file system and manage their own execution loop.
 
-#### 1. What it is
-An autonomous agent living in your terminal/environment. It "lives" where the work happens (the file system).
+### 2. Critical Analysis & Rationale
+*   **The OS Interface:** These agents use the "Computer" as a tool. This is different from using "The Web" as a tool. Access to `bash` makes them omnipotent within the machine.
+*   **The Loop:** The key differentiator is the *persistence* of the OODA loop. It keeps trying until it succeeds or you kill it.
 
-#### 2. Key Features
-*   **Zero-Shot Planning:** You give it the goal; it determines every sub-step itself.
-*   **Deep Integration:** Direct access to local files, git history, and command line.
-*   **Enhanced by MCP:** Plugs into external systems (databases) instantly.
-*   **Enhanced by Skills:** Loads modular folders (`SKILL.md`) for specific procedures.
+### 3. Step-by-Step Explanation
 
-#### 3. Best For
-*   **Complex Debugging:** Where the error is unknown.
-*   **Ad-hoc Analysis:** "Why are sales down?"
-*   **Reasoning Loop:** Reads, thinks, acts, self-corrects.
+#### a. Basic Insights
+*   **Identity:** These are "Agents in the Terminal." They live where the developer lives.
+*   **Capabilities:** They can read files, edit code, run shell commands, and install packages.
+*   **Zero-Shot Planning:** You give them a vague goal ("Fix the bug"), and they figure out the 10 steps to do it.
 
----
+#### b. Advanced Insights
+*   **The "Context Awareness":** Unlike a web chatbot (which knows nothing of your repo), these agents index your local file system. They have "Grounding" in your reality.
+*   **The "OODA Loop" Optimization:** These tools are fine-tuned specifically for the *Reasoning Loop*. They know when to stop and check their work (e.g., running `npm test` after writing code).
+*   **Tool-Use Native:** They treat the OS Shell as just another tool.
 
-### Strategic Deep Dive (GEMINI.md Extensions)
+### 4. When to Use?
+*   **Refactoring:** "Rename this variable across all 50 files."
+*   **Onboarding:** "Explain how this authentication module works."
+*   **Debugging:** "Run the tests, read the error, and fix the code."
 
-#### 1. Objective
-To deep dive into "Option A": The General Agent. Explaining what makes tools like Claude Code/Goose different from chatbots—specifically filesystem access and the execution loop.
+### 5. Examples
 
-#### 2. Step-by-Step Explanation
-*   **Basic Insights:** Agents in the Terminal. They read/write files and run commands.
-*   **Advanced Insights:** **Context Awareness.** They index your repo/file system, giving them "Grounding." **OODA Loop Optimization.** Fine-tuned for the Reasoning Loop—they know when to stop and check their work (e.g., running tests after coding).
+#### a. Basic (The Fix)
+*   *User:* "The app is crashing on startup."
+*   *Agent:* Runs app -> Sees error -> Greps for error -> Edits config file -> Restarts app -> "Fixed."
 
-#### 3. Examples
-*   **Basic:** User: "App crashing." Agent: Runs app, sees error, greps source, edits config, restarts. Fixed.
-*   **Intermediate:** User: "Convert Python to TS." Agent: Reads Python, writes TS, installs compiler, fixes type errors.
-*   **PhD / Advanced:** **Recursive Architecture.** User: "Improve architecture." Agent: Analyzes dependency graph, identifies circular deps, refactors folder structure, moves files, runs tests, writes PR.
+#### b. Intermediate (The Migration)
+*   *User:* "Convert this Python script to TypeScript."
+*   *Agent:* Reads Python -> Writes TS -> Installs TS compiler -> Compiles -> Fixes type errors -> "Done."
 
-#### 4. Implementation in Agentic AI
-*   **Install:** `npm install -g @anthropic-ai/claude-code`.
-*   **Config:** `AGENTS.md` (Slide 51) tells the General Agent the rules of the repo.
+#### c. PhD / Advanced (The Self-Architecting System)
+*   *Concept:* **Recursive Architecture.**
+*   *Scenario:* You ask the General Agent to "Improve the architecture of this project." It analyzes the dependency graph, identifies circular dependencies, creates a new folder structure, moves files, updates imports, runs tests to ensure nothing broke, and writes a PR description explaining the refactor.
 
-#### 5. Why This Matters?
-*   **Productivity:** "Cloning yourself."
-*   **Junior Dev Replacement:** Replaces the "Junior Dev" role for bug fixing/refactoring.
+### 6. Implementation in Agentic AI
+*   **Installation:** `npm install -g @anthropic-ai/claude-code`
+*   **Configuration:** `AGENTS.md` (Slide 51) is crucial here. It tells the General Agent the "Rules of the Road" for your specific repo.
 
-#### 6. Architecture Deep Dive
-*   **Shell Integration:** Wrapper around `zsh`/`bash`. Intercepts `stdout`/`stderr` to "see" results.
+### 7. Why This Matters?
+*   **Productivity:** It is the closest thing to "Cloning yourself."
+*   **The "Junior Dev" Replacement:** These agents effectively replace the "Junior Dev" role of basic bug fixing and refactoring.
 
-#### 7. Reflection Questions
-*   *Have you installed a CLI agent yet?*
-*   *Do you have an `AGENTS.md` file?*
+### 8. What Problem Does It Solve?
+*   **Context Switching:** You don't have to copy-paste code into ChatGPT. The agent is *in* the code.
+
+### 9. Architecture Deep Dive
+*   **The Shell Integration:**
+    *   **Wrapper:** The Agent is a wrapper around `zsh` / `bash`.
+    *   **I/O Interception:** It intercepts stdout/stderr to "See" the result of its actions.
+    *   **Security:** It usually requires "Permission" for dangerous commands (like `rm -rf`).
+
+### 10. Common Practices & Pitfalls
+*   **Pitfall:** Trusting it blindly with `git push`.
+    *   *Correction:* Always review the `git diff` before letting the agent commit. It *can* delete your work.
+*   **Practice:** "Small Scopes." Don't say "Rebuild the app." Say "Refactor this component."
+
+### 11. Reflection Questions
+1.  *Have you installed a CLI agent yet? (If not, you are working too hard).*
+2.  *Do you have an `AGENTS.md` file to guide your General Agent?*
