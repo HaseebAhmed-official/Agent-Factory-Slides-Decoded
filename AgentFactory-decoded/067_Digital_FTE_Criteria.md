@@ -1,43 +1,49 @@
-# Slide 67: What Defines a Digital FTE?
+# What Defines a Digital FTE?
 
 ## Core Message
 **A Digital FTE is an AI worker engineered for predictability and purpose.**
-It is distinct from a chatbot. To qualify as a "Digital FTE," an agent must meet four specific criteria.
+It is distinct from a chatbot. To qualify as a "Digital FTE," an agent must meet four specific criteria. These pillars ensure the agent is a production-ready professional asset rather than a experimental tool.
 
 ---
 
 ## 1. The Four Defining Characteristics
 
-### 1. Defined Role
-*   **Concept:** Specialization.
-*   **Detail:** It is assigned a specific job function (e.g., "Junior Compliance Auditor") rather than being a generic assistant.
-*   **Why:** Narrowing the scope reduces hallucinations and allows for clear performance metrics (KPIs) similar to a human job description.
+### Pillar 1: Defined Role (Specialization)
+*   **The Concept:** Digital FTEs have specific Job Descriptions. They are specialized experts, not general assistants.
+*   **The Implementation:** Enforced via strict Personas and Identity Specs (e.g., "Senior Forensic Accountant").
+*   **Value:** Narrowing the scope drastically reduces hallucinations and increases reliability.
 
-### 2. Uses Tools & APIs
-*   **Concept:** Agency (The ability to act).
-*   **Detail:** It interacts with other systems and data sources to complete tasks. It doesn't just talk; it *does*.
-*   **Technical Enabler:** **MCP (Model Context Protocol)**. This connects the agent to SQL databases, CRMs (Salesforce), and communication platforms (Slack).
+### Pillar 2: Uses Tools & APIs (Agency)
+*   **The Concept:** The ability to impact the real world.
+*   **The Implementation:** The agent is connected to infrastructure via **MCP (Model Context Protocol)**. It can read from databases and write to APIs (Slack, Jira, Stripe).
+*   **Value:** It provides **End-to-End Automation**. It doesn't just suggest an answer; it performs the action.
 
-### 3. Operates Continuously
-*   **Concept:** Persistence.
-*   **Detail:** It is designed for persistent, ongoing work, not just on-demand queries. It works 168 hours a week (24/7).
-*   **Example:** An agent that wakes up every hour to check a folder for new PDF invoices, processes them, and goes back to sleep. It doesn't wait for a user to say "Process this."
+### Pillar 3: Operates Continuously (Persistence)
+*   **The Concept:** The "Always-On" advantage.
+*   **The Implementation:** The agent runs on a **Cron Schedule** or an **Event Listener**.
+*   **Value:** It clears backlogs 24/7 (168 hours/week), removing the 40-hour human bandwidth bottleneck.
 
-### 4. Predictable Cost & Behavior
-*   **Concept:** Engineering Standards.
-*   **Detail:** Its operational parameters are controlled and measurable.
-    *   **Behavior:** Enforced via **Guardrails** and **Specs** (Deterministic logic). It follows company policy perfectly.
-    *   **Cost:** Predictable token usage allowing for fixed pricing.
+### Pillar 4: Predictable Cost & Behavior (Control)
+*   **The Concept:** Making AI safe for Enterprise.
+*   **The Implementation:**
+    *   **Behavior:** Enforced via **Deterministic Guardrails** (Code-backed logic).
+    *   **Cost:** Optimized context windows and model selection to ensure a stable "Cost per Task."
+*   **Value:** Enterprises require consistency. This pillar ensures the agent follows policy perfectly and stays within budget.
 
 ---
 
 ## 2. Technical & Business Glossary
 
-### **Predictability**
-In AI engineering, this refers to the ability to trust the output. A "Creative" writer bot is low predictability. A "Digital FTE" must be high predictability (Deterministic). We achieve this by moving logic out of the LLM and into Python scripts (`tools.py`) wherever possible.
-
 ### **Agency**
-The capacity of an AI system to take actions in the real world (e.g., sending an email, writing to a database) rather than just outputting text.
+The capacity of an AI system to take actions independently to achieve a goal. High-agency agents require less human "babysitting."
 
-### **KPI (Key Performance Indicator)**
-A measurable value that demonstrates how effectively a company is achieving key business objectives. For a Digital FTE, KPIs might be "Time to Response," "Accuracy Rate," or "Cost per Task."
+### **Cron Schedule**
+A time-based job scheduler that enables agents to wake up and perform tasks at specific intervals (e.g., "Every hour on the hour").
+
+### **Hallucination**
+When an AI generates plausible but incorrect information. We minimize this through Role Definition and Tool-grounding.
+
+### **Deterministic vs. Probabilistic**
+*   **Probabilistic:** The creative, variable nature of LLMs.
+*   **Deterministic:** The fixed, exact nature of code.
+*   **The FTE Mix:** A Digital FTE uses a probabilistic brain to reason, but a deterministic body (guardrails) to act safely.

@@ -1,58 +1,59 @@
-# Slides 68 & 69: Digital FTE - Deep Dive & Economics
+# Digital FTE: The Economics of Agentic Labor
 
 ## Core Message
 **Digital FTE stands for Digital Full-Time Equivalent.**
 *The transition from selling Software to selling Labor.*
 
-These slides explain the fundamental economic shift of the Agent Factory: moving from low-priced "Software Seats" to high-priced "Digital Labor."
+The fundamental economic shift of the Agent Factory is the move from low-priced "Software Seats" to high-priced "Digital Labor." This reframe allows builders to justify 10x higher pricing by solving labor shortages rather than software gaps.
 
 ---
 
 ## 1. The Concept: What is an FTE?
 
-### The Origin (Human FTE)
-*   **Definition:** **Full-Time Equivalent.** A unit of measurement representing one employee working full-time (40 hours/week).
-*   **Usage:** Companies budget in "Headcount." (e.g., "We have budget for 5 FTEs").
+### The Human Standard (FTE)
+*   **Definition:** **Full-Time Equivalent.** A unit used by HR to represent the workload of one employee working 40 hours/week (~2,000 hours/year).
+*   **The Budget:** Companies plan their growth in "Headcount."
 
-### The Shift (Digital FTE)
-*   **Definition:** An AI agent that is built, hired, and priced **as if it were a human employee**.
-*   **The Difference:**
-    *   **SaaS Model:** You sell a tool (Salesforce) for **$50/month**. The human uses the tool.
-    *   **Digital FTE Model:** You sell a "Digital Sales Agent" for **$1,500/month**. The agent *does the work*.
-
----
-
-## 2. The Monetization Power-Move (Economics)
-
-### Budget Hacking: IT vs. Headcount
-*   **IT Budget (Software):** Small, strict, scrutinized. "Do we really need another $20 subscription?"
-*   **Headcount Budget (Salaries):** Massive. "We have $50,000 open budget to hire a Junior Analyst."
-*   **The Strategy:** By calling your agent a "Digital FTE," you tap into the massive **Headcount Budget**.
-    *   $1,500/month looks expensive for "Software."
-    *   $1,500/month looks incredibly cheap for an "Employee" (compared to $4,000/mo human salary).
-
-### Outcome over Usage
-*   **The Pitch:** CEOs don't care about "API tokens" or "compute cycles." They care about **Value**.
-*   **ROI Calculation:** "I'm paying $1k for a bot that does $4k worth of human work." This is a simple, irresistible value proposition.
+### The Digital Standard (Digital FTE)
+*   **Definition:** An AI agent priced and "hired" as if it were a human employee.
+*   **The Capacity:** 1.0 Digital FTE = 168 hours/week (~8,700 hours/year).
+*   **The Math:** A single Digital FTE has the theoretical capacity of **4.2 Human FTEs**, yet costs a fraction of a single human's salary.
 
 ---
 
-## 3. The "Agent Skills" Connection
-This connects the Technology to the Business:
-1.  **Your Knowledge:** You possess domain expertise (e.g., "Invoice Reconciliation").
-2.  **Claude Code:** You use the General Agent to codify that knowledge into an **Agent Skill** (`SKILL.md`).
-3.  **The Digital FTE:** You package that Skill into a bot, give it a "Job Title" ("Digital Accountant"), and sell it as a **1.0 Digital FTE**.
+## 2. The Monetization Power-Move: "Budget Hacking"
+
+To maximize revenue, you must understand which "Corporate Wallet" you are tapping into.
+
+### Wallet A: The IT Budget (Software)
+*   **The Metric:** Price per user/month.
+*   **The Size:** Small. Strictly scrutinized.
+*   **The Friction:** High. Companies are tired of $20/month SaaS subscriptions.
+
+### Wallet B: The Headcount Budget (Labor)
+*   **The Metric:** Annual Salary.
+*   **The Size:** Massive. Usually the largest expense in a business.
+*   **The Strategy:** Position your Agent here.
+    *   **The Pitch:** "Don't hire a human Junior Analyst for $50k. Hire our **Digital Analyst** for $18k/year. It's already trained, works 24/7, and never quits."
+*   **The Result:** $1,500/month is expensive for software, but a **70% discount** for labor.
+
+---
+
+## 3. Outcome over Usage
+
+Digital FTEs charge for **Outcome**, not consumption.
+*   **The Logic:** CEOs don't care about tokens or compute cycles. They care about the result (e.g., "Invoices reconciled").
+*   **The Value:** Fixed-rate pricing removes the "bill shock" of token usage and makes the agent a predictable line-item on the budget, just like a salary.
 
 ---
 
 ## 4. Technical & Business Glossary
 
+### **Labor Arbitrage**
+The practice of taking advantage of the price difference between human labor ($5/task) and digital labor ($0.50/task). The "Delta" between these two is the profit captured by the Agent Factory.
+
 ### **OpEx (Operational Expenditure)**
-The day-to-day costs of running a business (Salaries, Rent, Subscriptions). The Digital FTE pitch is about **OpEx Reduction** (saving 90% on labor costs).
+The ongoing day-to-day costs of running a business. Digital FTEs are a primary tool for "OpEx Optimization"—allowing companies to scale output without scaling payroll.
 
-### **Headcount**
-The number of people employed by a company. In the "Scaling Paradox," companies want to increase *Output* (revenue) without increasing *Headcount* (costs). Digital FTEs allow exactly this.
-
-### **Arbitrage**
-Taking advantage of a price difference between two markets.
-*   **Labor Arbitrage:** Exploiting the difference between the high cost of Human Labor ($5/task) and the low cost of Digital Labor ($0.50/task). The Agent Factory business model is built on capturing this margin.
+### **The "Scaling Paradox"**
+The traditional business reality where growing revenue requires hiring more people. Digital FTEs break this paradox, allowing **Exponential Scaling**—where output grows while headcount (and human effort) remains flat.
